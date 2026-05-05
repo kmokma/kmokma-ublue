@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: kmokma-bazzite
+name: kmokma-bazzite-nvidia-open
 description: This is my custom Bazzite Nvidia Open image
 base-image: ghcr.io/ublue-os/bazzite-nvidia-open
 image-version: stable

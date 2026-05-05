@@ -14,7 +14,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   NVIDIA:
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite-nvidia-open:latest
   AMD:
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite-amd:latest
   ```
@@ -25,7 +25,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 - Then rebase to the signed image, like so:
   ```
   NVIDIA:
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-nvidia-open:latest
   AMD:
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-amd:latest
   ```
