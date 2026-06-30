@@ -27,6 +27,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
+          - recipe-gnome-nvidia-open.yml
           - recipe-nvidia-open.yml
           - recipe-amd.yml
     steps:
