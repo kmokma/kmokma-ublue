@@ -1,14 +1,26 @@
 modules:
+  - type: script
+    source: ghcr.io/blue-build/modules/script:latest
+    snippets:
+     - |
+        if [[ "$(image-info base-image)" != *"bluefin"* ]]; then
+          echo "Non-Bluefin image detected. Setting up VS Code..."
+          
+          # Download the actual VS Code repository file
+          curl -fLsS --retry 5 --create-dirs https://microsoft.com/yumrepos/vscode/config.repo -o /etc/yum.repos.d/vscode.repo
+          
+          # Install the code package right here, strictly on non-bluefin variants
+          dnf install -y code
+        else
+          echo "Bluefin detected. Skipping VS Code setup entirely."
+        fi
   - type: dnf
     source: ghcr.io/blue-build/modules/dnf:latest
     repos:
-      files:
-        - https://packages.microsoft.com/yumrepos/vscode/config.repo
       copr:
         - atim/starship
     install:
       packages:
-        - code
         - micro
         - starship
   - type: default-flatpaks

@@ -31,6 +31,7 @@ jobs:
           - recipe-bazzite-nvidia-open.yml
           - recipe-bazzite-gnome-amd.yml
           - recipe-bazzite-amd.yml
+          - recipe-bluefin-amd.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
