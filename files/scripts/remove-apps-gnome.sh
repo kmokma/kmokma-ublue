@@ -1,0 +1,1 @@
+flatpak remove --system -y org.gnome.TextEditor || true

@@ -20,6 +20,7 @@ modules:
           - br.eng.silas.qpdftools
           - com.notesnook.Notesnook
           - com.collaboraoffice.Office
+          - org.gnome.gedit
           - re.sonny.Eloquent
           - me.proton.Mail
           - me.proton.Pass
@@ -36,6 +37,7 @@ modules:
       - scope: user
   - type: script
     scripts:
+      - remove-apps-gnome.sh
       - remove-apps.sh
       - signal-setup.sh
   - type: signing
