@@ -1,4 +1,4 @@
-# kmokma-bazzite &nbsp; [![bluebuild build badge](https://github.com/kmokma/kmokma-bazzite/actions/workflows/build.yml/badge.svg)](https://github.com/kmokma/kmokma-bazzite/actions/workflows/build.yml)
+# kmokma-ublue&nbsp; [![bluebuild build badge](https://github.com/kmokma/kmokma-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/kmokma/kmokma-ublue/actions/workflows/build.yml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
@@ -15,8 +15,10 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   NVIDIA:
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite-nvidia-open:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-gnome-nvidia-open:latest
   AMD:
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite-amd:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/kmokma/kmokma-bazzite-gnome-amd:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -26,15 +28,17 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   NVIDIA:
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-nvidia-open:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-gnome-nvidia-open:latest
   AMD:
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-amd:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kmokma/kmokma-bazzite-gnome-amd:latest
   ```
 - Reboot again to complete the installation
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe-nvidia-open.yml` and `recipe-amd.yml`, so you won't get accidentally updated to the next major version.
+The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe`, so you won't get accidentally updated to the next major version.
 
 ## ISO
 
@@ -46,7 +50,7 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 
 ```bash
 NVIDIA:
-cosign verify --key cosign.pub ghcr.io/kmokma/kmokma-bazzite
+cosign verify --key cosign.pub ghcr.io/kmokma/kmokma-ublue
 AMD:
-cosign verify --key cosign.pub ghcr.io/kmokma/kmokma-bazzite
+cosign verify --key cosign.pub ghcr.io/kmokma/kmokma-ublue
 ```

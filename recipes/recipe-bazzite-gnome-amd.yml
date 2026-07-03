@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: kmokma-bazzite-amd
+description: This is my custom Bazzite AMD image
+base-image: ghcr.io/ublue-os/bazzite
+image-version: stable
+
+modules:
+  - from-file: recipe-common-gnome.yml

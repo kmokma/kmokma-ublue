@@ -27,9 +27,10 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-gnome-nvidia-open.yml
-          - recipe-nvidia-open.yml
-          - recipe-amd.yml
+          - recipe-bazzite-gnome-nvidia-open.yml
+          - recipe-bazzite-nvidia-open.yml
+          - recipe-bazzite-gnome-amd.yml
+          - recipe-bazzite-amd.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

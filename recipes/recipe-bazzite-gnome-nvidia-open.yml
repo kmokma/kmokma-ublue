@@ -5,4 +5,4 @@ base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
 image-version: stable
 
 modules:
-  - from-file: recipe-common.yml
+  - from-file: recipe-common-gnome.yml

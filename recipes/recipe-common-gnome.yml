@@ -29,8 +29,8 @@ modules:
           - com.protonvpn.www
           - org.signal.Signal
           - com.calibre_ebook.calibre
-          - org.kde.skanlite
-          - org.kde.kasts
+          - org.gnome.SimpleScan
+          - org.gnome.Podcasts
           - io.github.pwr_solaar.solaar
           - com.usebottles.bottles
           - io.gitlab.Goodvibes
