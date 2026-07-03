@@ -5,8 +5,9 @@ modules:
      - |
         if ! grep -qi "bluefin" /etc/os-release; then
           echo "Non-Bluefin image detected. Setting up VS Code..."          
-          curl -fLsS --retry 5 --create-dirs https://microsoft.com -o /etc/yum.repos.d/vscode.repo          
-          dnf install -y code
+          curl -fLsS --retry 5 --create-dirs https://microsoft.com -o /etc/yum.repos.d/vscode.repo   
+          rpm --import https://packages.microsoft.com/keys/microsoft.asc       
+          dnf install -y code --setopt=gpgcheck=1 code
         else
           echo "Bluefin detected. Skipping VS Code setup entirely."
         fi
