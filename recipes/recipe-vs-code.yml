@@ -1,0 +1,9 @@
+modules:
+  - type: dnf
+    source: ghcr.io/blue-build/modules/dnf:latest
+    repos:
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+    install:
+      packages:
+        - code

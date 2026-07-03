@@ -5,4 +5,5 @@ base-image: ghcr.io/ublue-os/bazzite
 image-version: stable
 
 modules:
+  - from-file: recipe-vs-code.yml
   - from-file: recipe-common-gnome.yml
