@@ -29,8 +29,8 @@ jobs:
           # !! Add your recipes here
           - recipe-bazzite-gnome-nvidia-open.yml
           - recipe-bazzite-nvidia-open.yml
-          - recipe-bazzite-gnome-amd.yml
-          - recipe-bazzite-amd.yml
+          - recipe-bazzite-gnome.yml
+          - recipe-bazzite.yml
           - recipe-bluefin-dx.yml
     steps:
       # the build is fully handled by the reusable github action

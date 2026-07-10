@@ -28,7 +28,7 @@ modules:
           - org.signal.Signal
           - com.calibre_ebook.calibre
           - org.gnome.SimpleScan
-          - org.gnome.Podcasts
+          - org.kde.kasts
           - io.github.pwr_solaar.solaar
           - com.usebottles.bottles
           - io.gitlab.Goodvibes
